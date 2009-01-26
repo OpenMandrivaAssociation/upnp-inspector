@@ -4,11 +4,10 @@ Name: upnp-inspector
 Summary: An UPnP Device and Service analyzer
 Version: 0.1.7
 Release: %mkrel 1
-Group: Networking/File transfer
+Group: Networking/Other
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 URL: https://coherence.beebits.net/wiki/UPnP-Inspector
 Source0: https://coherence.beebits.net/download/%{tarball_name}-%version.tar.bz2
-Source1: coherence-32x32.png
 License: MIT
 Provides: UPnP-Inspector = %version
 Requires: python-coherence >= 0.6.0
@@ -49,17 +48,14 @@ mkdir -p %buildroot/usr/share/icons/%name
 mkdir -p $RPM_BUILD_ROOT%{_datadir}/applications/
 
 python setup.py install --root=%buildroot --install-lib=%py_platsitedir
-#install -m 755 misc/coherence-initscript.sh %buildroot/%_initrddir/coherence
-#install -m 644 %SOURCE1 %buildroot/%_sysconfdir/coherence
-#mv "%buildroot/%py_platsitedir/misc/Desktop Applet/tango-system-file-manager.png" %buildroot/usr/share/icons/coherence
 
 # install icons
 mkdir -p %{buildroot}%{_miconsdir}
 mkdir -p %{buildroot}%{_iconsdir}
 mkdir -p %{buildroot}%{_liconsdir}
-install -m 644 %SOURCE1 %{buildroot}%{_iconsdir}/%name.png
-convert -scale 16x16 %SOURCE1 $RPM_BUILD_ROOT%{_miconsdir}/%name.png
-convert -scale 48x48 %SOURCE1 $RPM_BUILD_ROOT%{_liconsdir}/%name.png
+install -m 644 upnp_inspector/icons/inspector-logo.png %{buildroot}%{_iconsdir}/%name.png
+convert -scale 16x16 upnp_inspector/icons/inspector-logo.png $RPM_BUILD_ROOT%{_miconsdir}/%name.png
+convert -scale 48x48 upnp_inspector/icons/inspector-logo.png $RPM_BUILD_ROOT%{_liconsdir}/%name.png
 
 # menu
 cat > $RPM_BUILD_ROOT%{_datadir}/applications/%{name}.desktop <<EOF
