@@ -2,7 +2,7 @@
 
 Name: upnp-inspector
 Summary: An UPnP Device and Service analyzer
-Version: 0.1.7
+Version: 0.2.0
 Release: %mkrel 1
 Group: Networking/Other
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
