@@ -3,7 +3,7 @@
 Name: upnp-inspector
 Summary: An UPnP Device and Service analyzer
 Version: 0.2.2
-Release: %mkrel 1
+Release: %mkrel 2
 Group: Networking/Other
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 URL: https://coherence.beebits.net/wiki/UPnP-Inspector
