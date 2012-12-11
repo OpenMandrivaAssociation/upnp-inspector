@@ -74,3 +74,24 @@ EOF
 %clean
 rm -rf %buildroot
 
+
+
+%changelog
+* Sat Nov 06 2010 Funda Wang <fwang@mandriva.org> 0.2.2-2mdv2011.0
++ Revision: 594034
+- rebuld for py2.7
+
+* Mon Aug 17 2009 Frederik Himpe <fhimpe@mandriva.org> 0.2.2-1mdv2010.0
++ Revision: 417408
+- update to new version 0.2.2
+
+* Mon Mar 09 2009 Erwan Velu <erwan@mandriva.org> 0.2.0-1mdv2009.1
++ Revision: 353291
+- 0.2.0
+
+* Mon Jan 26 2009 Erwan Velu <erwan@mandriva.org> 0.1.7-1mdv2009.1
++ Revision: 333759
+- Fixing logo
+- import upnp-inspector
+
+
